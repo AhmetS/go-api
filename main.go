@@ -23,11 +23,12 @@ func main() {
 	r := mux.NewRouter()
 	r.HandleFunc("/", homeHandler)
 	r.HandleFunc("/products", productsHandler)
-
 	http.Handle("/", r)
 
 	log.Println("API Server Started on", ADDR)
-	http.ListenAndServe(ADDR, nil)
+	if err := http.ListenAndServe(ADDR, nil); err != nil {
+		log.Fatalln(err)
+	}
 }
 
 func homeHandler(w http.ResponseWriter, r *http.Request) {
