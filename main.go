@@ -36,7 +36,7 @@ func homeHandler(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(200)
 
 	body := "Hello from home"
-	log.Println("Hello Home")
+	log.Println("Home 0.2")
 
 	json.NewEncoder(w).Encode(body)
 }
@@ -45,7 +45,7 @@ func productsHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
 	w.WriteHeader(200)
 
-	log.Println("Hello Products")
+	log.Println("Products 0.2")
 
 	products := []product{
 		{1, "XBOX", "200.02"},
