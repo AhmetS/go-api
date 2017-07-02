@@ -51,6 +51,7 @@ func productsHandler(w http.ResponseWriter, r *http.Request) {
 		{1, "XBOX", "200.02"},
 		{2, "Playstation", "300.03"},
 		{3, "Wii", "100.01"},
+		{4, "Atari", "5.00"},
 	}
 
 	json.NewEncoder(w).Encode(products)
