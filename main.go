@@ -35,7 +35,7 @@ func homeHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
 	w.WriteHeader(200)
 
-	body := "Hello from home"
+	body := "Hello from home v0.4"
 	log.Println("Home 0.2")
 
 	json.NewEncoder(w).Encode(body)
