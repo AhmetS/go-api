@@ -3,7 +3,6 @@ package main
 import (
 	"encoding/json"
 	"net/http"
-
 	"log"
 
 	"github.com/gorilla/mux"
@@ -35,8 +34,8 @@ func homeHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
 	w.WriteHeader(200)
 
-	body := "Hello from home v0.4"
-	log.Println("Home 0.2")
+	body := "Hello from home v0.9"
+	log.Println("Home 0.9")
 
 	json.NewEncoder(w).Encode(body)
 }
@@ -56,3 +55,4 @@ func productsHandler(w http.ResponseWriter, r *http.Request) {
 
 	json.NewEncoder(w).Encode(products)
 }
+
